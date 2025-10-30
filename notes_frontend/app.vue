@@ -1,6 +1,13 @@
+<script setup lang="ts">
+/**
+ * Root app shell: wraps pages with Toast container.
+ */
+</script>
+
 <template>
-  <div>
+  <div class="app">
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <NuxtPage />
+    <Toast />
   </div>
 </template>
