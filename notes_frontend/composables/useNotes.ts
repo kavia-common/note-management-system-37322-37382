@@ -21,7 +21,11 @@ function sortNotes(list: Note[]) {
 
 // PUBLIC_INTERFACE
 export function useNotes() {
-  /** This composable provides CRUD operations and reactive notes state. */
+  /**
+   * This composable provides CRUD operations and reactive notes state.
+   * It respects the active API target (internal mock server routes or external backend)
+   * via the apiFetch wrapper which resolves the correct base URL using runtime feature flags.
+   */
   const notes = state.notes
   const loading = state.loading
   const loaded = state.loaded
